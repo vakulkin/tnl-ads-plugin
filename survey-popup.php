@@ -38,17 +38,6 @@ function enqueue_survey_popup_assets()
             true
         );
     }
-
-    if (! empty($entry['css'])) {
-        foreach ($entry['css'] as $i => $css) {
-            wp_enqueue_style(
-                "survey-popup-css-$i",
-                plugins_url("dist/{$css}", __FILE__),
-                [],
-                null
-            );
-        }
-    }
 }
 
 /**
